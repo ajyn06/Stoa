@@ -12,7 +12,7 @@ function showSlides() {
   setTimeout(showSlides, 3000); 
 }
 
-const scrollElements = document.querySelectorAll(".animate-on-scroll");
+const scrollElements = document.querySelectorAll(".animate-on-scroll, .collection-item");
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -29,4 +29,27 @@ window.addEventListener("scroll", () => {
     let yPos = window.scrollY * speed;
     el.style.backgroundPosition = `center ${yPos}px`;
   });
+});
+
+// Collection Overlay Functionality
+const collectionItems = document.querySelectorAll(".collection-item img");
+const overlay = document.getElementById("overlay");
+const overlayImg = document.getElementById("overlay-img");
+const closeBtn = document.getElementById("close-btn");
+
+collectionItems.forEach(item => {
+  item.addEventListener("click", () => {
+    overlay.style.display = "flex";
+    overlayImg.src = item.src;
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  overlay.style.display = "none";
+});
+
+overlay.addEventListener("click", (e) => {
+  if (e.target === overlay) { 
+    overlay.style.display = "none"; 
+  }
 });
