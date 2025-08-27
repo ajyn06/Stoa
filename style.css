@@ -80,9 +80,10 @@ nav ul li a.active {
 }
 
 .about-bg img {
-  width: 1230px;
-  height: 435px;
+  min-width: 1500px;
+  height: 450px;
   object-fit: cover; 
+  margin-inline: 10%;
 }
 
 .about-title {
@@ -94,8 +95,8 @@ nav ul li a.active {
 
 .about-box {
   position: absolute;
-  bottom: 70px;
-  right: 60px;
+  bottom: 100px;
+  right:  60px;
   max-width: 430px;
   background: #541212;
   color: #EAE4D5;
