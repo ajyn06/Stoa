@@ -52,3 +52,16 @@ overlay.addEventListener("click", (e) => {
     overlay.style.display = "none"; 
   }
 });
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+  e.preventDefault(); // stop page reload
+
+  const successMsg = document.getElementById("success-message");
+  successMsg.classList.add("show");
+
+  setTimeout(() => {
+    successMsg.classList.remove("show");
+  }, 3000);
+
+  this.reset(); // clear form
+});
