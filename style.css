@@ -1,4 +1,3 @@
-/* Reset & General */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +10,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Header */
 header {
   position: fixed;
   top: 5%;
@@ -49,7 +47,6 @@ nav ul li a.active {
   height: 100vh;
   overflow: hidden;
 }
-
 .slideshow img {
   width: 100%;
   height: 100vh;
@@ -82,29 +79,25 @@ nav ul li a.active {
   overflow: hidden;
 }
 
-/* Background image on the left */
 .about-bg img {
   width: 1230px;
   height: 435px;
-  object-fit: cover; /* keeps aspect ratio while filling the box */
+  object-fit: cover; 
 }
 
-
-/* About Us title (floating on the right) */
 .about-title {
   position: absolute;
   top: 50px;
   right: 60px;
-  width: 280px; /* adjust size */
+  width: 280px; 
 }
 
-/* Description box */
 .about-box {
   position: absolute;
   bottom: 70px;
   right: 60px;
   max-width: 430px;
-  background: #541212; /* your box color */
+  background: #541212;
   color: #EAE4D5;
   padding: 30px 30px;
   font-size: 14px;
@@ -113,13 +106,80 @@ nav ul li a.active {
   border-bottom-left-radius: 75px;
 }
 
-/* Scroll Animation */
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(40px);
   transition: all 1s ease-out;
 }
 
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* History Section */
+.history {
+  position: relative;
+  background: #000;
+  color: #EAE4D5;
+  padding: 10px 10px;
+  margin-bottom: 30px;
+}
+.history-title {
+  position: absolute;
+  top: -80px; 
+  left: 40%; 
+  transform: translateX(-50%); 
+  width: 280px; 
+  z-index: 5;    
+}
+.history-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin: 40px auto;
+  max-width: 1100px; 
+  gap: 0px;
+  margin-bottom: -40px;
+}
+
+.history-img.parallax {
+  flex: 1;
+  min-width: 350px;
+  height: 500px;
+  background-size: cover;
+  background-position: center ;
+}
+
+.history-img.static-img {
+  flex: 1;
+  min-width: 350px;
+}
+.history-img.static-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.history-text {
+  flex: 1;
+  min-width: 350px;
+  background: #541212;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.8;
+  font-size: 16px;
+  text-align: left;
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease-in-out;
+}
 .animate-on-scroll.visible {
   opacity: 1;
   transform: translateY(0);

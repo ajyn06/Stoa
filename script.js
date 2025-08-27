@@ -23,5 +23,10 @@ const observer = new IntersectionObserver(entries => {
 });
 
 scrollElements.forEach(el => observer.observe(el));
-
-
+window.addEventListener("scroll", () => {
+  document.querySelectorAll(".parallax").forEach(el => {
+    let speed = 0.4;
+    let yPos = window.scrollY * speed;
+    el.style.backgroundPosition = `center ${yPos}px`;
+  });
+});
