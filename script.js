@@ -31,7 +31,6 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// Collection Overlay Functionality
 const collectionItems = document.querySelectorAll(".collection-item img");
 const overlay = document.getElementById("overlay");
 const overlayImg = document.getElementById("overlay-img");
