@@ -41,6 +41,32 @@ nav ul li a:hover,
 nav ul li a.active {
   color: #541212;
 }
+.slideshow-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 5;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: none;
+  border-radius: 50%;
+  border: 2px solid #EAE4D5;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+.dot.active {
+  background-color: #EAE4D5;
+  transform: scale(1.2);
+}
+
 .slideshow {
  position: relative;
   width: 100%;
@@ -165,7 +191,6 @@ nav ul li a.active {
   text-align: left;
 }
 
-
 /* Collection Section */
 .collection {
   text-align: center;
@@ -242,7 +267,7 @@ nav ul li a.active {
   top: 20px;
   right: 40px;
   font-size: 40px;
-  color: #fff;
+  color: #EAE4D5;
   cursor: pointer;
 }
 
@@ -267,7 +292,7 @@ nav ul li a.active {
   z-index: 1;
 }
 .visit-red-bottom {
-  height: 400px;
+  height: 450px;
   width: 80%;
   margin: 0 auto;
   background: #541212; 
@@ -300,9 +325,10 @@ nav ul li a.active {
   margin-top: -500px;
   padding: 40px 60px;
   max-width: 350px;
-  height: 300px;
-  color: #fff;
+  height: 350px;
+  color: #EAE4D5;
   z-index: 3;
+  box-shadow: 0 10px 20px rgba(9, 0, 0, 0.403);
 }
 
 .visit-item {
@@ -310,6 +336,7 @@ nav ul li a.active {
   align-items: flex-start;
   text-align: left;
   margin: 20px 0;
+  line-height: 1.6;
 }
 
 .visit-icon {
@@ -336,7 +363,7 @@ nav ul li a.active {
   display: flex;
   min-height: 90vh;
   background: #000;
-  color: #fff;
+  color: #EAE4D5;
 }
 
 .contact-left {
@@ -410,7 +437,7 @@ nav ul li a.active {
 
 .contact-right input:focus,
 .contact-right textarea:focus {
-  border-color: #fff;
+  border-color: #EAE4D5;
 }
 
 .contact-right button {
@@ -462,7 +489,7 @@ nav ul li a.active {
   top: 30px;
   right: 30px;
   background: #541212;
-  color: #fff;
+  color: #EAE4D5;
   padding: 12px 20px;
   border-radius: 6px;
   font-size: 14px;
