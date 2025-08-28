@@ -54,7 +54,7 @@ overlay.addEventListener("click", (e) => {
 });
 
 document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault(); // stop page reload
+  e.preventDefault(); 
 
   const successMsg = document.getElementById("success-message");
   successMsg.classList.add("show");
@@ -63,5 +63,26 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     successMsg.classList.remove("show");
   }, 3000);
 
-  this.reset(); // clear form
+  this.reset(); 
+});
+
+const navLinks = document.querySelectorAll("nav ul li a");
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100; 
+    const sectionHeight = section.clientHeight;
+    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
 });

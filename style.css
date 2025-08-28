@@ -488,3 +488,20 @@ nav ul li a.active {
   opacity: 1;
   transform: translateY(0);
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 120px; 
+}
+
+section:target {
+  animation: sectionFocus 0.8s ease;
+}
+
+@keyframes sectionFocus {
+  from { transform: scale(0.98); opacity: 0.6; }
+  to { transform: scale(1); opacity: 1; }
+}
