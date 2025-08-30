@@ -938,6 +938,7 @@ nav ul {
   .footer-info {
     font-size: 11px;
     line-height: 1.4;
+    margin-top: -20px;
   }
 }
 
