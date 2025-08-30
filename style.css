@@ -193,6 +193,71 @@ nav ul {
   border-bottom-left-radius: 75px;
 }
 
+@media (max-width: 1024px) {
+  .about {
+    padding: 40px 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-bg img {
+    min-width: auto;
+    width: 100%;
+    height: auto;
+    margin-inline: 0;
+  }
+
+  .about-title {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 20px;
+    width: 220px;
+  }
+
+  .about-box {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 20px;
+    max-width: 80%;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .about {
+    padding: 30px 15px;
+  }
+
+  .about-title {
+    width: 180px;
+    margin-top: 15px;
+  }
+
+  .about-box {
+    padding: 20px;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-top: -20px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+}
+@media (max-width: 400px) {
+  .about-title {
+    width: 150px;
+  }
+
+  .about-box {
+    max-width: 95%;
+    font-size: 12px;
+    padding: 15px;
+
+  }
+}
+
+
 /* History Section */
 .history {
   position: relative;
