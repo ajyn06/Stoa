@@ -831,6 +831,117 @@ nav ul {
   line-height: 1.6;
 }
 
+@media (max-width: 1024px) {
+  .contact {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  .contact-left {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: 0;
+    height: auto;
+    padding: 30px 20px;
+  }
+
+  .feedback-title {
+    margin-top: -100px;
+    max-width: 280px;
+  }
+
+  .contact-left p {
+    margin-top: -80px;
+    font-size: 13px;
+  }
+
+  .contact-right {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .contact-right form {
+    margin-left: 0;
+    max-width: 500px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .feedback-title {
+    margin-top: -60px;
+    max-width: 220px;
+  }
+
+  .contact-left p {
+    margin-top: -40px;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .contact-text {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .contact-right form {
+    width: 100%;
+    max-width: 400px;
+    padding: 0 15px;
+  }
+
+  .contact-right input,
+  .contact-right textarea {
+    font-size: 13px;
+  }
+
+  .contact-right button {
+    width: 70%;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedback-title {
+    max-width: 180px;
+    margin-top: -30px;
+  }
+
+  .contact-left p {
+    margin-top: -50px;
+    font-size: 12px;
+  }
+
+  .contact-right form {
+    gap: 15px;
+  }
+
+  .contact-right button {
+    width: 80%;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .footer-left {
+    margin-right: 0;
+  }
+
+  .footer-logo {
+    height: 80px;
+  }
+
+  .footer-info {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+}
+
+
 #success-message {
   position: fixed;
   top: 30px;
