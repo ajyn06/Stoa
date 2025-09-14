@@ -154,6 +154,7 @@ nav ul {
   }
 }
 
+/* About Section */
 .about {
   position: relative;
   background: #000;
@@ -191,6 +192,70 @@ nav ul {
   line-height: 1.6;
   border-top-right-radius: 75px;
   border-bottom-left-radius: 75px;
+}
+
+@media (max-width: 1024px) {
+  .about {
+    padding: 40px 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-bg img {
+    min-width: auto;
+    width: 100%;
+    height: auto;
+    margin-inline: 0;
+  }
+
+  .about-title {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-top: 20px;
+    width: 220px;
+  }
+
+  .about-box {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 20px;
+    max-width: 80%;
+    text-align: center;
+  }
+}
+@media (max-width: 600px) {
+  .about {
+    padding: 30px 15px;
+  }
+
+  .about-title {
+    width: 180px;
+    margin-top: 15px;
+  }
+
+  .about-box {
+    padding: 20px;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-top: -20px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+  }
+}
+@media (max-width: 400px) {
+  .about-title {
+    width: 150px;
+  }
+
+  .about-box {
+    max-width: 95%;
+    font-size: 12px;
+    padding: 15px;
+
+  }
 }
 
 /* History Section */
@@ -250,7 +315,77 @@ nav ul {
   font-size: 16px;
   text-align: left;
 }
+@media (max-width: 1024px) {
+  .history {
+    padding: 20px;
+  }
 
+  .history-title {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 20px auto;
+    display: block;
+    width: 220px;
+    text-align: center;
+  }
+
+  .history-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    gap: 10px;
+    max-width: 100%;
+    margin: 20px auto;
+  }
+
+  .history-img.parallax,
+  .history-img.static-img {
+    min-width: auto;
+    height: 300px;
+  }
+
+  .history-text {
+    min-width: auto;
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 15px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .history-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .history-img.parallax,
+  .history-img.static-img {
+    height: 220px;
+  }
+
+  .history-text {
+    font-size: 13px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .history-title {
+    width: 160px;
+  }
+
+  .history-row {
+    grid-template-columns: 1fr;
+  }
+
+  .history-img.parallax,
+  .history-img.static-img {
+    height: 200px;
+  }
+}
 
 /* Collection Section */
 .collection {
@@ -337,6 +472,56 @@ nav ul {
   to { opacity: 1; transform: scale(1); }
 }
 
+@media (max-width: 1024px) {
+  .collection-title {
+    width: 350px;
+    margin-bottom: -100px;
+  }
+
+  .collection-grid {
+    gap: 20px;
+    max-width: 900px;
+  }
+
+  .collection-item img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .collection-title {
+    width: 280px;
+    margin-bottom: -80px;
+  }
+
+  .collection-grid {
+    gap: 15px;
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .collection-item img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .collection-title {
+    width: 220px;
+    margin-bottom: -60px;
+  }
+
+  .collection-grid {
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .collection-item img {
+    height: 140px;
+  }
+}
+
+
 /* Visit Us Section */
 .visit {
   position: relative;
@@ -417,6 +602,107 @@ nav ul {
 .visit-box.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (max-width: 1024px) {
+  .visit-title {
+    width: 300px;
+    margin-bottom: -140px;
+  }
+
+  .visit-red-top,
+  .visit-red-bottom,
+  .visit-bg {
+    width: 90%;
+  }
+
+  .visit-bg {
+    height: 400px;
+  }
+
+  .visit-box {
+    margin-top: -420px;
+    max-width: 300px;
+    height: auto;
+    padding: 30px 40px;
+  }
+
+  .visit-item {
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .visit-title {
+    width: 240px;
+    margin-bottom: -100px;
+  }
+
+  .visit-red-top,
+  .visit-red-bottom,
+  .visit-bg {
+    width: 95%;
+  }
+
+  .visit-red-top {
+    height: 70px;
+  }
+
+  .visit-bg {
+    height: 300px;
+  }
+
+  .visit-red-bottom {
+    height: 300px;
+  }
+
+  .visit-box {
+    margin-top: -330px;
+    max-width: 260px;
+    padding: 25px 30px;
+    font-size: 14px;
+  }
+
+  .visit-icon {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .visit-title {
+    width: 180px;
+    margin-bottom: -70px;
+  }
+
+  .visit-red-top {
+    height: 50px;
+  }
+
+  .visit-bg {
+    height: 220px;
+  }
+
+  .visit-red-bottom {
+    height: 220px;
+  }
+
+  .visit-box {
+    margin-top: -250px;
+    max-width: 220px;
+    padding: 20px;
+    font-size: 13px;
+  }
+
+  .visit-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .visit-icon {
+    margin-bottom: 6px;
+  }
 }
 
 /* Contact Section */
@@ -544,6 +830,118 @@ nav ul {
   text-align: left;
   line-height: 1.6;
 }
+
+@media (max-width: 1024px) {
+  .contact {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  .contact-left {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: 0;
+    height: auto;
+    padding: 30px 20px;
+  }
+
+  .feedback-title {
+    margin-top: -100px;
+    max-width: 280px;
+  }
+
+  .contact-left p {
+    margin-top: -80px;
+    font-size: 13px;
+  }
+
+  .contact-right {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .contact-right form {
+    margin-left: 0;
+    max-width: 500px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .feedback-title {
+    margin-top: -60px;
+    max-width: 220px;
+  }
+
+  .contact-left p {
+    margin-top: -40px;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .contact-text {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .contact-right form {
+    width: 100%;
+    max-width: 400px;
+    padding: 0 15px;
+  }
+
+  .contact-right input,
+  .contact-right textarea {
+    font-size: 13px;
+  }
+
+  .contact-right button {
+    width: 70%;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedback-title {
+    max-width: 180px;
+    margin-top: -30px;
+  }
+
+  .contact-left p {
+    margin-top: -50px;
+    font-size: 12px;
+  }
+
+  .contact-right form {
+    gap: 15px;
+  }
+
+  .contact-right button {
+    width: 80%;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .footer-left {
+    margin-right: 0;
+  }
+
+  .footer-logo {
+    height: 80px;
+  }
+
+  .footer-info {
+    font-size: 11px;
+    line-height: 1.4;
+    margin-top: -20px;
+  }
+}
+
 
 #success-message {
   position: fixed;
