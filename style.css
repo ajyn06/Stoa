@@ -269,7 +269,7 @@ nav ul {
 .history-title {
   position: absolute;
   top: -80px; 
-  left: 40%; 
+  left: 45%; 
   transform: translateX(-50%); 
   width: 280px; 
   z-index: 5;    
@@ -547,7 +547,7 @@ nav ul {
 
 .visit-bg {
   width: 80%;
-  height: 500px; 
+  height: 400px; 
   margin: 0 auto;
   background-size: cover;
   background-position: center;
